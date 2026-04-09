@@ -18,9 +18,9 @@ export function Footer() {
           {/* Logo & Tagline */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="Body Master Gym" className="h-16 w-16 rounded-full object-cover" />
+              <img src={logo} alt="98 Fitness Club" className="h-16 w-16 rounded-full object-cover" />
               <div>
-                <h3 className="font-display text-2xl tracking-wider">BODY MASTER GYM</h3>
+                <h3 className="font-display text-2xl tracking-wider">98 FITNESS CLUB</h3>
                 <p className="text-sm text-muted-foreground">Tu transformación comienza aquí</p>
               </div>
             </div>
@@ -63,7 +63,7 @@ export function Footer() {
               📞 {SOCIAL_LINKS.whatsappNumber}
             </p>
             <p className="text-sm text-muted-foreground mb-4">
-              📍 Bogotá, Colombia
+              📍 Soacha, Colombia
             </p>
             <div className="flex gap-4">
               <a
@@ -107,8 +107,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Body Master Gym. Todos los derechos reservados.</p>
-          <p className="mt-2">📍 Bogotá, Colombia</p>
+          <p>© {new Date().getFullYear()} 98 Fitness Club. Todos los derechos reservados.</p>
+          <p className="mt-2">📍 Soacha, Colombia</p>
         </div>
       </div>
     </footer>

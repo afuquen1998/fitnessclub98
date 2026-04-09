@@ -74,7 +74,7 @@ const services = [
   {
     icon: BadgePercent,
     title: "Descuentos Exclusivos",
-    description: "Beneficios en comercios aliados por ser parte de Body Master Gym.",
+    description: "Beneficios en comercios aliados por ser parte de 98 Fitness.",
   },
 ];
 
@@ -102,33 +102,18 @@ const approaches = [
 const testimonials = [
   {
     name: "Carolina M.",
-    text: "Llevo 6 meses en Body Master Gym y el cambio ha sido increíble. Las máquinas son de primera y los entrenadores siempre están pendientes de corregir tu técnica.",
+    text: "Llevo 6 meses en 98 Fitness y el cambio ha sido increíble. Las máquinas son de primera y los entrenadores siempre están pendientes de corregir tu técnica.",
     stars: 5,
-    date: "Hace 3 días",
   },
   {
     name: "Andrés G.",
-    text: "El mejor gimnasio de Bogotá sin duda. El ambiente es brutal, la gente te motiva y el seguimiento con la app es un plus que no encuentras en otro lado.",
+    text: "El mejor gimnasio de Soacha sin duda. El ambiente es brutal, la gente te motiva y el seguimiento con la app es un plus que no encuentras en otro lado.",
     stars: 5,
-    date: "Marzo 2026",
   },
   {
     name: "Laura P.",
     text: "Pasé de no hacer ejercicio a no poder dejar de ir. Las clases grupales son súper dinámicas y la asesoría nutricional me ayudó a organizar mi alimentación.",
     stars: 5,
-    date: "Febrero 2026",
-  },
-  {
-    name: "Miguel R.",
-    text: "Las instalaciones son impecables. Nunca he visto un gimnasio tan bien equipado en Bogotá. Los entrenadores saben lo que hacen.",
-    stars: 5,
-    date: "Hace 1 semana",
-  },
-  {
-    name: "Valentina S.",
-    text: "Me encanta el ambiente y la energía. El seguimiento con la app me motiva mucho a seguir. 100% recomendado.",
-    stars: 4,
-    date: "Enero 2026",
   },
 ];
 
@@ -161,7 +146,7 @@ const appFeatures = [
 
 export default function Index() {
   return (
-    <Layout showSplash>
+    <Layout>
       {/* ===== HERO ===== */}
       <section className="relative bg-secondary overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/5" />
@@ -170,7 +155,7 @@ export default function Index() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1 text-center md:text-left animate-fade-in">
               <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-                📍 El mejor gimnasio de Bogotá
+                📍 El mejor gimnasio de Soacha
               </div>
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-secondary-foreground mb-6 tracking-wider leading-none">
                 TRANSFORMA
@@ -180,8 +165,8 @@ export default function Index() {
                 <span className="text-primary">Y TU VIDA</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl">
-                En <strong className="text-foreground">Body Master Gym</strong> cuentas con entrenadores certificados,
-                maquinaria de última generación y un plan personalizado para alcanzar tus metas.
+                En <strong className="text-foreground">98 Fitness Club</strong> cuentas con entrenadores certificados, 
+                maquinaria de última generación y un plan personalizado para alcanzar tus metas. 
                 <span className="text-primary font-semibold"> ¡Tu primera asesoría es gratis!</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -204,7 +189,7 @@ export default function Index() {
                 <div className="absolute inset-0 bg-primary/30 rounded-full blur-3xl scale-110" />
                 <img
                   src={logo}
-                  alt="Body Master Gym - Gimnasio en Bogotá"
+                  alt="98 Fitness Club - Gimnasio en Soacha"
                   className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-primary shadow-2xl"
                 />
               </div>
@@ -307,40 +292,21 @@ export default function Index() {
       {/* ===== TESTIMONIOS ===== */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <span className="text-primary font-medium text-sm uppercase tracking-widest">Lo que dicen nuestros miembros</span>
             <h2 className="font-display text-4xl md:text-6xl mt-2 mb-4 tracking-wider text-secondary-foreground">
               PRUEBA <span className="text-primary">SOCIAL</span>
             </h2>
           </div>
 
-          {/* Global Rating Banner */}
-          <Card className="border-primary/30 bg-primary/5 mb-10 max-w-lg mx-auto">
-            <CardContent className="p-6 text-center">
-              <div className="text-5xl font-display tracking-wider text-foreground mb-2">4.9 / 5</div>
-              <div className="flex justify-center gap-1 mb-3">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className={`h-6 w-6 ${i < 4 ? "fill-primary text-primary" : "fill-primary/80 text-primary/80"}`} />
-                ))}
-              </div>
-              <p className="text-muted-foreground text-sm">Basado en más de 50 reseñas reales de Google y Facebook</p>
-            </CardContent>
-          </Card>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, index) => (
               <Card key={index} className="border-border hover:border-primary/30 transition-all duration-300">
                 <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex gap-1">
-                      {Array.from({ length: t.stars }).map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                      ))}
-                      {Array.from({ length: 5 - t.stars }).map((_, i) => (
-                        <Star key={`e-${i}`} className="h-5 w-5 text-muted-foreground/30" />
-                      ))}
-                    </div>
-                    <span className="text-xs text-muted-foreground">{t.date}</span>
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: t.stars }).map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                    ))}
                   </div>
                   <p className="text-muted-foreground mb-6 italic">"{t.text}"</p>
                   <div className="flex items-center gap-3">
@@ -399,7 +365,7 @@ export default function Index() {
                     <MapPin className="h-6 w-6 text-primary" />
                     <h3 className="font-display text-2xl tracking-wide">UBICACIÓN</h3>
                   </div>
-                  <p className="text-muted-foreground mb-2">📍 Bogotá, Colombia</p>
+                  <p className="text-muted-foreground mb-2">📍 Soacha, Colombia</p>
                   <p className="text-muted-foreground text-sm mb-8">
                     Estamos ubicados en una zona de fácil acceso. ¡Ven y conócenos!
                   </p>

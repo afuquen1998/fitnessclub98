@@ -41,9 +41,9 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Body Master Gym" className="h-12 w-12 rounded-full object-cover" />
+            <img src={logo} alt="98 Fitness Club" className="h-12 w-12 rounded-full object-cover" />
             <span className="font-display text-2xl tracking-wider text-foreground">
-              BODY MASTER GYM
+              98 FITNESS CLUB
             </span>
           </Link>
 

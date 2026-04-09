@@ -104,11 +104,11 @@ export const TRAINING_FOCUS = {
 };
 
 export const SOCIAL_LINKS = {
-  instagram: "", // TODO: añadir link de Instagram
-  whatsapp: "", // TODO: añadir link de WhatsApp
-  whatsappNumber: "", // TODO: añadir número de WhatsApp
-  tiktok: "", // TODO: añadir link de TikTok
-  maps: "", // TODO: añadir link de Google Maps
+  instagram: "https://instagram.com/98fitnessclub",
+  whatsapp: "https://wa.me/573213055641?text=Hola!%20Quiero%20información%20sobre%20el%20gimnasio.",
+  whatsappNumber: "+57 321 3055641",
+  tiktok: "https://www.tiktok.com/@98fitness_club?_r=1&_t=ZS-95DW3waHLV3",
+  maps: "https://maps.app.goo.gl/sFd47GTBpGtuzmq3A",
 };
 
 export const BOGOTA_FOODS = {
